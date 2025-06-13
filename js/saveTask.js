@@ -9,6 +9,11 @@ function handleSubmit(event) {
     const discipline = form.elements.disciplina.value;
 
 
+    const date = new Date(datetime)
+    const day = date.getDate()
+    const month = date.getMonth() + 1
+
+
     if (new Date(datetime).getDay() === 0 || new Date(datetime).getDay() === 6) {
         alert("Não é possível criar uma tarefa em um dia de fim de semana.")
         return
@@ -28,7 +33,24 @@ function handleSubmit(event) {
         type
     }
 
-    createCard(newTask)
+    if(window.location.href.includes('planner')){
+        createCard(newTask)
+    }else if(window.location.href.includes('dashboard')){
+        const taskList = document.querySelector(".tasks-list")
+
+        taskList.innerHTML += `<div class="task-item">
+                  <input type="checkbox" id="task1" />
+                  <label for="task1">
+                    <span class="task-title">${newTask.title}</span>
+                    <span class="task-meta">
+                      <span class="task-subject">${newTask.discipline}</span>
+                      <span class="task-due">${day}/${month}</span>
+                    </span>
+                  </label>
+                  <div class="task-priority ${newTask.priority}"></div>
+                </div>`
+    }
+    
 
 
     document.getElementById('modal').close()

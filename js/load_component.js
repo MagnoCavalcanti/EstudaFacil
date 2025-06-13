@@ -7,8 +7,5 @@ async function loadComponent(id, file) {
 }
 
 loadComponent("navbar", "components/navbar.html");
-
-if(window.location.pathname.split('/').pop() === "planner.html"){
-    loadComponent("modal", "components/modal.html");
-}
+loadComponent("modal", "components/modal.html");
 

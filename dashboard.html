@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/Logo EstudaFacil.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/components/modal.css">
+    <title>EstudaFacil</title>
+  </head>
+  <body>
+    <div class="dashboard">
+      
+      <aside id="navbar">
+      </aside>
+
+      
+      <main class="main-content">
+        
+        <div class="dashboard-content">
+          
+          <section class="summary-cards">
+            <div class="card summary-card">
+              <div class="card-icon pending">📝</div>
+              <div class="card-info">
+                <h3>Tarefas Pendentes</h3>
+                <p class="card-value">8</p>
+              </div>
+            </div>
+            <div class="card summary-card">
+              <div class="card-icon completed">✅</div>
+              <div class="card-info">
+                <h3>Tarefas Concluídas</h3>
+                <p class="card-value">12</p>
+              </div>
+            </div>
+            <div class="card summary-card">
+              <div class="card-icon upcoming">⏰</div>
+              <div class="card-info">
+                <h3>Próximos Prazos</h3>
+                <p class="card-value">5</p>
+              </div>
+            </div>
+            <div class="card summary-card">
+              <div class="card-icon subjects">📚</div>
+              <div class="card-info">
+                <h3>Disciplinas</h3>
+                <p class="card-value">6</p>
+              </div>
+            </div>
+          </section>
+
+          
+          <div class="dashboard-grid">
+            
+            <section class="card tasks-card">
+              <div class="card-header">
+                <h2>Tarefas Recentes</h2>
+                <div class="card-actions">
+                  <select id="task-filter">
+                    <option value="all">Todas</option>
+                    <option value="pending">Pendentes</option>
+                    <option value="completed">Concluídas</option>
+                  </select>
+                  <button class="btn-add" onclick="document.getElementById('modal').showModal()">+ Nova Tarefa</button>
+                </div>
+              </div>
+              <div class="tasks-list">
+                <!--<div class="task-item">
+                  <input type="checkbox" id="task1" />
+                  <label for="task1">
+                    <span class="task-title">Relatório de Biologia</span>
+                    <span class="task-meta">
+                      <span class="task-subject">Biologia</span>
+                      <span class="task-due">Hoje</span>
+                    </span>
+                  </label>
+                  <div class="task-priority high"></div>
+                </div>
+                <div class="task-item">
+                  <input type="checkbox" id="task2" />
+                  <label for="task2">
+                    <span class="task-title">Exercícios de Matemática</span>
+                    <span class="task-meta">
+                      <span class="task-subject">Matemática</span>
+                      <span class="task-due">Amanhã</span>
+                    </span>
+                  </label>
+                  <div class="task-priority medium"></div>
+                </div>
+                <div class="task-item">
+                  <input type="checkbox" id="task3" checked />
+                  <label for="task3">
+                    <span class="task-title">Resumo de História</span>
+                    <span class="task-meta">
+                      <span class="task-subject">História</span>
+                      <span class="task-due">Concluído</span>
+                    </span>
+                  </label>
+                  <div class="task-priority low"></div>
+                </div>
+                <div class="task-item">
+                  <input type="checkbox" id="task4" />
+                  <label for="task4">
+                    <span class="task-title">Apresentação de Física</span>
+                    <span class="task-meta">
+                      <span class="task-subject">Física</span>
+                      <span class="task-due">3 dias</span>
+                    </span>
+                  </label>
+                  <div class="task-priority high"></div>
+                </div>
+                <div class="task-item">
+                  <input type="checkbox" id="task5" />
+                  <label for="task5">
+                    <span class="task-title">Leitura de Literatura</span>
+                    <span class="task-meta">
+                      <span class="task-subject">Literatura</span>
+                      <span class="task-due">5 dias</span>
+                    </span>
+                  </label>
+                  <div class="task-priority medium"></div>
+                </div>-->
+              </div>
+            </section>
+
+            
+            <section class="card progress-card">
+              <div class="card-header">
+                <h2>Progresso por Disciplina</h2>
+              </div>
+              <div class="progress-list">
+                <div class="progress-item">
+                  <div class="progress-info">
+                    <span class="progress-subject">Matemática</span>
+                    <span class="progress-percentage">75%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 75%"></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="progress-info">
+                    <span class="progress-subject">Física</span>
+                    <span class="progress-percentage">60%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 60%"></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="progress-info">
+                    <span class="progress-subject">Biologia</span>
+                    <span class="progress-percentage">45%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 45%"></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="progress-info">
+                    <span class="progress-subject">História</span>
+                    <span class="progress-percentage">90%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div class="progress-item">
+                  <div class="progress-info">
+                    <span class="progress-subject">Literatura</span>
+                    <span class="progress-percentage">30%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 30%"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <dialog id="modal">
+    </dialog>
+
+    <script src="js/load_component.js"></script>
+    <script src="js/saveTask.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
