@@ -1,0 +1,45 @@
+<form method="dialog" onsubmit="handleSubmit(event)" id="form">
+  <input type="text" name="titulo" id="titulo" placeholder="Título" />
+  <textarea
+    name="descricao"
+    id="descricao"
+    cols="30"
+    rows="10"
+    placeholder="Descricao da tarefa"
+  ></textarea>
+  <select name="disciplina" id="disciplina">
+    <option value="" disabled selected>Disciplina</option>
+    <option value="Português">Português</option>
+    <option value="Matemática">Matemática</option>
+    <option value="História">História</option>
+    <option value="Geografia">Geografia</option>
+    <option value="Física">Física</option>
+    <option value="Química">Química</option>
+    <option value="Biologia">Biologia</option>
+    <option value="Filosofia">Filosofia</option>
+    <option value="Sociologia">Sociologia</option>
+    <option value="Inglês">Inglês</option>
+    <option value="Espanhol">Espanhol</option>
+    <option value="Artes">Artes</option>
+    <option value="Educação Física">Educação Física</option>
+  </select>
+  <input type="datetime-local" name="entrega" id="entrega" />
+  <select name="tipo" id="tipo">
+    <option value="" disabled selected>Tipo</option>
+    <option value="Projeto">Projeto</option>
+    <option value="Seminário">Seminário</option>
+    <option value="Atividade">Atividade</option>
+    <option value="Outros">Outros</option>
+  </select>
+  <select name="demanda" id="demanda">
+    <option value="Alta">Alta</option>
+    <option value="Média">Média</option>
+    <option value="Baixa">Baixa</option>
+    <option value="Nenhuma" selected>Nenhuma</option>
+  </select>
+
+  <button type="submit">Criar tarefa</button>
+  <button type="button" onclick="document.getElementById('modal').close()">
+    Cancelar
+  </button>
+</form>
