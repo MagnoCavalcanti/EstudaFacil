@@ -5,7 +5,7 @@
 EstudaFácil é um gerenciador de tarefas acadêmicas desenvolvido para ajudar estudantes a se organizarem melhor em sua rotina de estudos. O sistema possui uma interface simples em página única, com um planner semanal interativo onde os usuários podem adicionar, visualizar, editar e remover tarefas por dia da semana. Ideal para quem busca praticidade e foco na vida acadêmica.  
 O principal objetivo do EstudaFácil é proporcionar aos estudantes uma forma simples, visual e eficiente de organizar suas tarefas acadêmicas, facilitando o planejamento semanal e incentivando a produtividade e o cumprimento de prazos.
 
-![Tela inicial do EstudaFácil](.assets/TelaEstudaFacil.png)
+![Tela inicial do EstudaFácil](.assets/TelaEstudaFacil.jpg)
 
 
 ---
