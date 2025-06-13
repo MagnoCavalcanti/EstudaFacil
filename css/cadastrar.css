@@ -15,8 +15,8 @@ body, html{
 }
 
 img{
-    width: 450px;
-    height: 155px;
+    width: 350px;
+    height: 120px;
     margin-bottom: 20px;
 }
 
@@ -40,7 +40,7 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
 }
 
 input{
@@ -52,7 +52,7 @@ input{
     font-size: 16px;
 } 
 
-input[type = "email"]:focus, input[type = "password"]:focus{
+input[type = "email"]:focus, input[type = "password"]:focus, input[type = "text"]:focus{
     outline: none;
     border: 1px solid #007bff;
 }
