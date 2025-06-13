@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+
+#navbar {
+    height: 100vh;
+    width: 150px;
+    overflow: hidden;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px auto;
+}
+
+main section.header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 55px;
+    align-self: start;
+}
+
+main section.planner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    align-self: center;
+}
+
+main div.day-card {
+    height: 250px;
+    width: 210px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+}
+
+button.AddTarefa {
+    height: 40px;
+    width: 150px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.AddTarefa:hover {
+    background-color: #0062cc;
+}
+
+button.AddTarefa:active {
+    background-color: #005cbf;
+    transform: translateY(2px);
+}
+
+main div.day-card table {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+
+
+}
+
+table {
+    border-spacing: 4px;
+}
+
+tr {
+    font-size: 15px;
+}
+
+tr p {
+    font-size: 10px;
+    font-weight: bold;
+    padding-top: 4px;
+
+}
+
+
+tr td {
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    height: 25px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+tr td .card {
+    height: 25px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
