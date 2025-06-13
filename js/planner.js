@@ -59,53 +59,10 @@ function dateLoader() {
 }
 
 
-function createCard(task) {
-    const dayCards = document.querySelectorAll(".day-card")
-    
-    const card = document.createElement('div');
-    card.classList.add('card');
-    card = disciplineColor(task.discipline, card)
-    card = borderColor(task.priority, card)
-    card.innerHTML = `${task.title} - ${task.type}`
 
 
 
-}    
 
-
-function handleSubmit(event) {
-    event.preventDefault();
-    const form = event.target;
-    const title= form.elements.titulo.value;
-    const description = form.elements.descricao.value;
-    const datetime = form.elements.entrega.value;
-    const priority = form.elements.demanda.value;
-    const type = form.elements.tipo.value;
-    const discipline = form.elements.disciplina.value;
-
-    console.log(title, description, datetime, priority, type, discipline)
-
-    if (datetime.getDay() === 0 || datetime.getDay() === 6) {
-        alert("Não é possível criar uma tarefa em um dia de fim de semana.")
-        return
-    }
-
-    const newTask = {
-        title,
-        description,
-        discipline,
-        datetime,
-        priority,
-        type
-    }
-
-    createCard(newTask)
-
-
-    document.getElementById('modal').close()
-
-
-}
 
 
 function App() {
