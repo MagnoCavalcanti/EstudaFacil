@@ -1,3 +1,42 @@
+:root {
+    /* Cores */
+    --bg-body: #f5f5f5;
+    --bg-container: #fff;
+    --border-color: #ccc;
+    --primary-color: #007bff;
+    --primary-hover: #0069d9;
+    --primary-active: #005cbf;
+    --text-color: #007bff;
+
+    /* Tamanhos */
+    --img-width: 450px;
+    --img-height: 155px;
+    --container-width: 400px;
+    --input-width: 300px;
+    --input-height: 40px;
+
+    /* Espaçamentos */
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --spacing-xl: 40px;
+
+    /* Border radius */
+    --border-radius-sm: 5px;
+    --border-radius-md: 10px;
+
+    /* Font sizes */
+    --font-size-title: 35px;
+    --font-size-base: 16px;
+    --font-size-small: small;
+
+    /* Sombras */
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    /* Transições */
+    --transition: all 0.3s ease;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,27 +50,27 @@ body, html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: var(--bg-body);
 }
 
 img{
-    width: 450px;
-    height: 155px;
-    margin-bottom: 20px;
+    width: var(--img-width);
+    height: var(--img-height);
+    margin-bottom: var(--spacing-md);
 }
 
 .container{
-    width: 400px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    width: var(--container-width);
+    background-color: var(--bg-container);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow);
+    padding: var(--spacing-md);
 }
 
 .container h1{
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 35px;
+    margin-bottom: var(--spacing-xl);
+    font-size: var(--font-size-title);
 }
 
 .container form{
@@ -40,43 +79,41 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: var(--spacing-lg);
 }
 
 input{
-    width: 300px;
-    height: 40px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 0 10px;
-    font-size: 16px;
+    width: var(--input-width);
+    height: var(--input-height);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    padding: 0 var(--spacing-sm);
+    font-size: var(--font-size-base);
 } 
 
 input[type = "email"]:focus, input[type = "password"]:focus{
     outline: none;
-    border: 1px solid #007bff;
+    border: 1px solid var(--primary-color);
 }
 
 input[type = "submit"]{
     border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
+    border-radius: var(--border-radius-sm);
+    background-color: var(--primary-color);
+    color: var(--bg-container);
+    font-size: var(--font-size-base);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 input[type = "submit"]:hover{
-    background-color: #0069d9;
+    background-color: var(--primary-hover);
 }
 
 input[type = "submit"]:active{
-    background-color: #005cbf;
+    background-color: var(--primary-active);
     transform: scale(0.95);
 }
-
-
 
 .container form div.maisInfo{
     display: flex;
@@ -84,13 +121,11 @@ input[type = "submit"]:active{
     justify-content: center;
     align-items: center;
     gap: 0px;
-    font-size: small;
+    font-size: var(--font-size-small);
 }
 
 a{
     font-weight: bold;
     text-decoration: none;
-    color: #007bff;
+    color: var(--text-color);
 }
-
-
